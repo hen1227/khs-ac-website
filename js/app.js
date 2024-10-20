@@ -17,3 +17,15 @@ const observer = new IntersectionObserver(function(entries, observer) {
 sections.forEach((section) => {
   observer.observe(section);
 });
+
+// Get all the menu links and the checkbox for the hamburger menu
+const menuLinks = document.querySelectorAll('.nav-menu li a');
+const navToggle = document.getElementById('nav-toggle');
+
+// Add click event listeners to each link
+menuLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    // Uncheck the checkbox to close the menu
+    navToggle.checked = false;
+  });
+});

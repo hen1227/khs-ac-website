@@ -22,17 +22,12 @@ a {
   max-width: 1200px;
   margin: 0 auto;
 }
-.container p {
-  max-width: 600px;
-  margin: 0 auto;
-}
 
 .large-container {
   width: 90%;
   max-width: 1200px;
   margin: 0 auto;
 }
-
 
 /* Navigation Styles */
 header {
@@ -43,21 +38,27 @@ header {
 }
 
 .navbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   padding: 5px 0;
 }
+
 .nav-container {
   display: flex;
   align-items: center;
-  margin: 20px;
+  justify-content: space-between; /* Added to space out logo and hamburger */
+  margin: 0 20px;
+  position: relative;
 }
 
 .logo {
   color: #fff;
   font-size: 24px;
   font-weight: 600;
+  display: flex;
+  align-items: center;
+}
+
+.logo-icon {
+  margin-right: 8px;
 }
 
 .nav-menu {
@@ -79,47 +80,32 @@ header {
   color: #ffd700;
 }
 
-/* Hamburger Menu */
+/* Hide the checkbox input */
 #nav-toggle {
   display: none;
 }
 
+/* Hide the hamburger icon by default */
 .nav-toggle-label {
   display: none;
 }
 
+/* Media Query for Mobile View */
 @media (max-width: 768px) {
-  .nav-menu {
-    position: fixed;
-    left: 0;
-    top: 60px;
-    background-color: #003366;
-    height: 100vh;
-    width: 100%;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    transform: translateX(-100%);
-    transition: transform 0.3s ease-in-out;
+  .nav-container {
+    /* Ensure logo and hamburger are on the same line and spaced */
+    justify-content: space-between;
   }
 
-  .nav-menu li {
-    margin: 20px 0;
-  }
-
-  #nav-toggle:checked + .nav-toggle-label + .nav-menu {
-    transform: translateX(0);
-  }
-
-  #nav-toggle {
-    display: block;
-  }
-
+  /* Show the hamburger icon */
   .nav-toggle-label {
     display: block;
     cursor: pointer;
+    position: relative;
+    z-index: 1001; /* Ensure it stays above other elements */
   }
 
+  /* Style the hamburger icon */
   .nav-toggle-label span,
   .nav-toggle-label span::before,
   .nav-toggle-label span::after {
@@ -139,13 +125,14 @@ header {
   }
 
   .nav-toggle-label span::before {
-    bottom: 8px;
+    top: -8px;
   }
 
   .nav-toggle-label span::after {
     top: 8px;
   }
 
+  /* Transform the hamburger icon into an 'X' when clicked */
   #nav-toggle:checked + .nav-toggle-label span {
     background: transparent;
   }
@@ -158,6 +145,38 @@ header {
   #nav-toggle:checked + .nav-toggle-label span::after {
     transform: rotate(-45deg);
     top: 0;
+  }
+
+  /* Hide the navigation menu by default */
+  .nav-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #003366;
+    height: 100vh;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 1000;
+  }
+
+  /* Show the menu when the hamburger is clicked */
+  #nav-toggle:checked + .nav-toggle-label + .nav-menu {
+    transform: translateX(0);
+  }
+
+  .nav-menu li {
+    margin: 20px 0;
+  }
+
+  .nav-menu li a {
+    font-size: 24px;
   }
 }
 
@@ -296,6 +315,16 @@ header {
   transform: scale(1.05);
 }
 
+@media (max-width: 768px) {
+  .timeline-item {
+    width: 100%;
+    padding: 2px;
+  }
+  .timeline-date {
+    font-size: 18px;
+  }
+}
+
 .timeline-date {
   font-size: 24px;
   font-weight: 600;
@@ -398,6 +427,12 @@ header {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 25px;
+}
+
+@media (max-width: 768px) {
+  .support-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .support-container {
