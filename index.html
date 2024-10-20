@@ -2,12 +2,42 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>KHS Appreciation Committee</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>KHS Appreciation Committee | Kennebunk High School</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Meta Description for SEO -->
+  <meta name="description" content="The Kennebunk High School Appreciation Committee (KHSAC) is dedicated to showing appreciation for teachers and staff, providing useful information for parents, and connecting the community. Join us in supporting KHS.">
+
+  <!-- Manifest for PWA -->
+  <link rel="manifest" href="/manifest.json">
+
+  <!-- Favicon and Icons -->
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="/assets/android-chrome-192x192.png">
+
+  <!-- Theme color for mobile browsers -->
+  <meta name="theme-color" content="#ffffff">
+
+  <!-- Meta tags for SEO and Social Sharing -->
+  <meta property="og:title" content="KHS Appreciation Committee | Kennebunk High School">
+  <meta property="og:description" content="Support the Kennebunk High School Appreciation Committee by participating in events, joining meetings, and showing appreciation for teachers and staff.">
+  <meta property="og:image" content="/assets/android-chrome-192x192.png">
+  <meta property="og:url" content="https://hen1227.github.io/khs-ac-website/">
+  <meta property="og:type" content="website">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="KHS Appreciation Committee | Kennebunk High School">
+  <meta name="twitter:description" content="The Kennebunk High School Appreciation Committee (KHSAC) connects parents, students, and teachers through appreciation events and helpful resources.">
+  <meta name="twitter:image" content="/assets/android-chrome-192x192.png">
+
   <!-- Google Fonts for modern typography -->
   <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600&display=swap" rel="stylesheet">
+
   <!-- Font Awesome for icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+
   <!-- Custom CSS -->
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -17,7 +47,7 @@
   <nav class="navbar">
     <div class="nav-container">
       <a href="#" class="logo">
-        <span class="logo-icon"><i class="fas fa-school"></i></span>
+        <img class="logo-icon" src="assets/logo.png" alt="Logo" />
         KHSAC
       </a>
       <!-- Hidden Checkbox -->
@@ -42,6 +72,7 @@
 <!-- Hero Section -->
 <section id="hero">
   <div class="hero-content">
+    <img class="hero-logo" src="assets/logo.png" alt="Logo" />
     <h1>KHS Appreciation Committee</h1>
     <p>Connecting parents and showing appreciation for our teachers and staff.</p>
     <a href="#mission" class="btn">Learn More</a>
@@ -52,7 +83,7 @@
 <section id="mission" class="section">
   <div class="container">
     <h2>Mission Statement</h2>
-    <p>The Kennebunk High School Appreciation Committee (KHSAC) is comprised of parent volunteers dedicated to showing appreciation for the teachers and staff community at KHS. We provide useful information for parents on our Facebook page and website as well as a school-wide family directory. We aim to connect parents to the school.</p>
+    <p>The Kennebunk High School Appreciation Committee (KHSAC) consists of parent volunteers dedicated to showing appreciation for the teachers and staff community at KHS. We provide useful information for parents on our Facebook page and website as well as a school-wide family directory. We aim to connect parents to the school.</p>
   </div>
 </section>
 
@@ -62,8 +93,10 @@
     <h2>Key Initiatives</h2>
     <div class="initiatives-grid">
       <div class="initiative-card">
+<!--        <img src="assets/initiatives/back-to-school-breakfast.png" alt="Back to School Breakfast">-->
         <i class="fas fa-apple-alt"></i>
         <h3>Back to School Breakfast</h3>
+        <p></p>
       </div>
       <div class="initiative-card">
         <i class="fas fa-pizza-slice"></i>
@@ -92,6 +125,18 @@
       <div class="initiative-card">
         <i class="fas fa-address-book"></i>
         <h3>School Directory</h3>
+      </div>
+      <div class="initiative-card">
+        <i class="fa-solid fa-broom"></i>
+        <h3>Custodians&apos; Day</h3>
+      </div>
+      <div class="initiative-card">
+        <i class="fas fa-clipboard-list"></i>
+        <h3>Pricipals&apos; Awareness Month</h3>
+      </div>
+      <div class="initiative-card">
+        <i class="fas fa-umbrella-beach"></i>
+        <h3>Less Stress Day Appreciation Day</h3>
       </div>
     </div>
   </div>
@@ -170,7 +215,7 @@
       <div class="leader-card">
         <img src="leader2.jpg" alt="Maureen DiGiovanni">
         <h3>Maureen DiGiovanni</h3>
-        <p>Parent of 9th & 11th Graders</p>
+        <p>Parent of 9th & 11th Grader</p>
       </div>
       <div class="leader-card">
         <img src="leader3.jpg" alt="Sarah Murray">
@@ -180,7 +225,7 @@
       <div class="leader-card">
         <img src="leader4.jpg" alt="Julie Lavery">
         <h3>Julie Lavery</h3>
-        <p>Parent of 9th & 11th Graders</p>
+        <p>Parent of 9th & 11th Grader</p>
       </div>
       <div class="leader-card">
         <img src="leader5.jpg" alt="Jill Abrahamsen">
@@ -278,7 +323,7 @@
         <a href="https://forms.gle/VunkyopVVcXnxwxQ7" class="btn">Community Support Form</a>
       </div>
       <div class="support-item">
-        <h3>Saying Thank You!</h3>
+        <h3>Say Thank You!</h3>
         <p>Please consider sharing a simple thank-you or a brief story through this Google Form. Once we’ve gathered enough responses, we’ll share them on our Facebook page and with the KHS teachers and staff.</p>
         <a href="https://forms.gle/8kXD2ognSQWiai177" class="btn">Thank You for Your Support!</a>
       </div>
