@@ -1,7 +1,7 @@
 # Kennebunk High School Appreciation Committee Website
 
 <div style="text-align: center;">
-    <img src="assets/logo.png" alt="KHSAC Logo" style="width:200px; height:auto;">
+    <img src="assets/logo-large.png" alt="KHSAC Logo" style="width:200px; height:auto;">
 </div>
 
 The Kennebunk High School Appreciation Committee (KHSAC) website is designed to support teachers, staff, and the community by providing relevant information and resources.
