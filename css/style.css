@@ -324,6 +324,33 @@ header {
   margin-bottom: 20px;
 }
 
+@media (max-width: 768px) {
+  .initiatives-grid {
+    gap: 10px;
+  }
+
+  .initiative-card {
+    flex-direction: row;
+    /*padding: 20px;*/
+    justify-content: flex-start;
+  }
+
+  .initiative-card i {
+    font-size: 30px;
+    width: 40px;
+    margin: auto 0;
+  }
+
+  .initiative-card h3 {
+    text-align: left;
+    font-size: 16px;
+    margin: auto 0;
+  }
+  .initiative-card:hover {
+    transform: translateY(0);
+  }
+}
+
 /* Meetings Timeline */
 .meetings-timeline {
   display: flex;
@@ -342,6 +369,7 @@ header {
   position: relative;
   transition: transform 0.3s;
 }
+
 .timeline-item.passed {
   background-color: #f9f9f9;
   color: #999;
@@ -360,6 +388,7 @@ header {
     justify-content: center;
     gap: 15px;
   }
+
   .timeline-item.passed {
     display: none;
   }
