@@ -97,7 +97,7 @@ header {
 }
 
 /* Media Query for Mobile View */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .nav-container {
     /* Ensure logo and hamburger are on the same line and spaced */
     justify-content: space-between;
