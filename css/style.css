@@ -189,7 +189,8 @@ header {
 /* Hero Section */
 #hero {
   padding-top: 80px;
-  background: url('../assets/chalkboard.jpeg') center center/cover no-repeat;
+  /*background: url('../assets/chalkboard.jpeg') center center/cover no-repeat;*/
+  background: url('../assets/khs-entrance.webp') center top / cover no-repeat;
   height: 100vh;
   display: flex;
   align-items: center;
@@ -212,22 +213,50 @@ header {
 .hero-logo {
   max-height: 250px;
   height: 60%;
+  filter: drop-shadow(0 0 30px #000) drop-shadow(0 0 10px #000);
   /*margin-top: 70px;*/
 }
 
 .hero-content {
   position: relative;
   z-index: 1;
+  /*text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);*/
 }
 
-.hero-content h1 {
+.hero-content > h1 {
   font-size: 48px;
-  margin-bottom: 20px;
+  margin: 20px 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-.hero-content p {
+.hero-content > p {
   font-size: 24px;
   margin-bottom: 30px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 768px) {
+  #hero {
+    background: url('../assets/khs-entrance.webp') 30% top / cover no-repeat;
+  }
+
+  .hero-logo {
+    max-height: 200px;
+    margin-top: 20px;
+  }
+
+  .hero-content {
+    height: calc(100% - 100px);
+  }
+
+  .hero-content h1 {
+    font-size: 36px;
+    margin-top: 120px;
+  }
+
+  .hero-content p {
+    font-size: 20px;
+  }
 }
 
 .btn {
@@ -526,6 +555,11 @@ header {
   text-align: center;
 }
 
+.support-item a {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
 .support-item h3 {
   font-size: 24px;
   margin-bottom: 15px;
@@ -603,4 +637,11 @@ header {
   /*height: 10px;*/
   margin: auto;
   /*margin-top: 20px;*/
+}
+
+.donation-highlight {
+  color: #2183e4;
+  border-radius: 10px;
+  text-align: center;
+  /*text-shadow: #000 1px 1px 1px;*/
 }
