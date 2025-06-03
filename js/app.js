@@ -35,3 +35,35 @@ if ('serviceWorker' in navigator) {
   navigator.serviceWorker.register('/sw.js')
     .then(function() { console.log("Service Worker Registered"); });
 }
+
+const items = document.querySelectorAll('.timeline-item');
+let anyUpcoming = false;
+
+items.forEach(item => {
+  const dateText = item.querySelector('.timeline-date').textContent.trim();
+  const timeText = item.querySelector('.timeline-content').textContent.trim();
+  const monthDay = dateText.replace(/^[^\w]+/, '').trim();
+  const now = new Date();
+  const currentYear = now.getFullYear();
+
+  const month = new Date(`${monthDay} ${currentYear}`).getMonth();
+
+  const year = (month < 8 && now.getMonth() >= 8) ? currentYear + 1 :
+    (month >= 8 && now.getMonth() < 8) ? currentYear - 1 :
+      currentYear;
+
+  const eventDate = new Date(`${monthDay} ${year} ${timeText}`);
+
+  if (eventDate < now) {
+    item.classList.add('passed');
+  } else {
+    anyUpcoming = true;
+  }
+});
+
+if (!anyUpcoming) {
+  const msg = document.createElement('div');
+  msg.className = 'timeline-message';
+  msg.textContent = 'More meetings will be posted for the upcoming school year!';
+  document.querySelector('.meetings-timeline')?.appendChild(msg);
+}
