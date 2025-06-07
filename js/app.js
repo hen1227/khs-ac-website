@@ -46,11 +46,15 @@ items.forEach(item => {
   const now = new Date();
   const currentYear = now.getFullYear();
 
-  const month = new Date(`${monthDay} ${currentYear}`).getMonth();
+  const testDate = new Date(`${monthDay} 2025 ${timeText}`);
+  const eventMonth = testDate.getMonth();
 
-  const year = (month < 8 && now.getMonth() >= 8) ? currentYear + 1 :
-    (month >= 8 && now.getMonth() < 8) ? currentYear - 1 :
-      currentYear;
+  let year;
+  if (currentYear === 2025) {
+    year = eventMonth >= 8 ? 2025 : 2026;
+  } else {
+    year = eventMonth >= 8 ? 2026 : 2025;
+  }
 
   const eventDate = new Date(`${monthDay} ${year} ${timeText}`);
 
