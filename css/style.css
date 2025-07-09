@@ -24,10 +24,15 @@ a {
 }
 
 .container p {
-  max-width: 600px;
+  max-width: 720px;
   margin: 10px auto;
 }
 
+@media screen and (max-width: 900px) {
+  .container p {
+    text-align: center;
+  }
+}
 .large-container {
   width: 90%;
   max-width: 1200px;
@@ -199,6 +204,11 @@ header {
   color: #fff;
   text-align: center;
 }
+#hero.proj-grad {
+  background:
+    linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+    url('../assets/bus.webp') center top / cover no-repeat;
+}
 
 #hero::after {
   content: '';
@@ -227,6 +237,7 @@ header {
   font-size: 48px;
   margin: 20px 0;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  padding: 0 30px;
 }
 
 .hero-content > p {
@@ -240,6 +251,11 @@ header {
 @media (max-width: 768px) {
   #hero {
     background: url('../assets/khs-entrance.webp') 30% top / cover no-repeat;
+  }
+  #hero.proj-grad {
+    background:
+      linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+      url('../assets/bus.webp') 30% center / cover no-repeat;
   }
 
   .hero-logo {
@@ -702,4 +718,56 @@ header {
   border-radius: 10px;
   text-align: center;
   /*text-shadow: #000 1px 1px 1px;*/
+}
+
+.highlight-box {
+  background-color: #fff9db;
+  border-left: 5px solid var(--secondary-color);
+  padding: 15px;
+  margin: 20px 0;
+  border-radius: 5px;
+}
+
+.events-list {
+  list-style: none;
+  padding: 10px 20px;
+  margin: 20px auto;
+  max-width: 500px;
+}
+
+.events-list > li {
+  margin-bottom: 10px;
+  padding-left: 20px;
+  position: relative;
+}
+
+.events-list > li::before {
+  content: "⭐";
+  position: absolute;
+  left: 0;
+}
+
+.btn {
+  display: inline-block;
+  margin: 10px 5px 10px 0;
+  text-decoration: none;
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  padding: 12px 24px;
+  border-radius: 5px;
+  font-weight: 600;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #e6b800;
+}
+
+.btn-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin: 20px auto;
+  max-width: 800px;
 }
