@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <script async
-          src="https://www.googletagmanager.com/gtag/js?id=G-W7HFXDZP5F"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-W7HFXDZP5F"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
 
@@ -22,178 +22,406 @@
 
   <!-- Meta Description for SEO -->
   <meta name="description"
-        content="The Kennebunk High School Appreciation Committee (KHSAC) is dedicated to showing appreciation for teachers and staff, providing useful information for parents, and connecting the community. Join us in supporting KHS.">
+    content="The Kennebunk High School Appreciation Committee (KHSAC) is dedicated to showing appreciation for teachers and staff, providing useful information for parents, and connecting the community. Join us in supporting KHS.">
 
   <!-- Manifest for PWA -->
   <link rel="manifest" href="https://khsac.org/manifest.json">
 
   <!-- Favicon and Icons -->
   <link rel="icon" href="/favicon.ico" type="image/x-icon">
-  <link rel="apple-touch-icon"
-        href="https://khsac.org/assets/android-chrome-192x192.png">
+  <link rel="apple-touch-icon" href="https://khsac.org/assets/android-chrome-192x192.png">
 
   <!-- Theme color for mobile browsers -->
   <meta name="theme-color" content="#ffffff">
 
   <!-- Meta-tags for SEO and Social Sharing -->
-  <meta property="og:title"
-        content="KHS Appreciation Committee | Kennebunk High School">
+  <meta property="og:title" content="KHS Appreciation Committee | Kennebunk High School">
   <meta property="og:description"
-        content="Support the Kennebunk High School Appreciation Committee by participating in events, joining meetings, and showing appreciation for teachers and staff.">
-  <meta property="og:image"
-        content="https://khsac.org/assets/android-chrome-192x192.png">
+    content="Support the Kennebunk High School Appreciation Committee by participating in events, joining meetings, and showing appreciation for teachers and staff.">
+  <meta property="og:image" content="https://khsac.org/assets/android-chrome-192x192.png">
   <meta property="og:url" content="https://khsac.org">
   <meta property="og:type" content="website">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title"
-        content="KHS Appreciation Committee | Kennebunk High School">
+  <meta name="twitter:title" content="KHS Appreciation Committee | Kennebunk High School">
   <meta name="twitter:description"
-        content="The Kennebunk High School Appreciation Committee (KHSAC) connects parents, students, and teachers through appreciation events and helpful resources.">
-  <meta name="twitter:image"
-        content="https://khsac.org/assets/android-chrome-192x192.png">
+    content="The Kennebunk High School Appreciation Committee (KHSAC) connects parents, students, and teachers through appreciation events and helpful resources.">
+  <meta name="twitter:image" content="https://khsac.org/assets/android-chrome-192x192.png">
 
   <!-- Google Fonts for modern typography -->
-  <link
-    href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600&display=swap" rel="stylesheet">
 
   <!-- Font Awesome for icons -->
-  <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
 
   <!-- Custom CSS -->
   <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-<header id="header">
-  <nav class="navbar">
-    <div class="nav-container">
-      <a href="/index.html" class="logo">
-        <img class="logo-icon" src="assets/logo.webp?v=1" alt="Logo"/>
-        KHSAC
-      </a>
+  <header id="header">
+    <nav class="navbar">
+      <div class="nav-container">
+        <a href="/index.html" class="logo">
+          <img class="logo-icon" src="assets/logo.webp?v=1" alt="Logo" />
+          KHSAC
+        </a>
+        <!-- Hidden Checkbox -->
+        <input type="checkbox" id="nav-toggle">
+        <!-- Hamburger Icon -->
+        <label for="nav-toggle" class="nav-toggle-label">
+          <span></span>
+        </label>
+        <!-- Navigation Menu -->
+        <ul class="nav-menu">
+          <li><a href="#">Project Graduation</a></li>
+          <li><a href="/index.html#mission">Mission</a></li>
+          <li><a href="/index.html#initiatives">Initiatives</a></li>
+          <li><a href="/index.html#meetings">Meetings</a></li>
+          <li><a href="/index.html#leadership">Leadership</a></li>
+          <li><a href="/index.html#links">Helpful Links</a></li>
+          <li><a href="/index.html#support">Support Us</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero" class="proj-grad">
+    <div class="large-container">
+      <div class="hero-header">
+        <img class="hero-logo-small" src="assets/logo.webp?v=1" alt="Logo" />
+        <h1>🎓 Project Graduation Fundraising</h1>
+        <p>Help us reach our goals for each class!</p>
+      </div>
+
+      <div class="grad-meters-grid">
+        <!-- SENIORS (2026) -->
+        <div class="meter-card">
+          <h2>Class of 2026</h2>
+          <div class="cap-meter" data-percentage="85">
+            <svg viewBox="0 0 100 80" class="cap-svg">
+              <defs>
+                <linearGradient id="fill2026" x1="0" y1="1" x2="0" y2="0">
+                  <stop offset="0%" stop-color="#003366" />
+                  <stop offset="85%" stop-color="#003366" />
+                  <stop offset="85%" stop-color="transparent" />
+                  <stop offset="100%" stop-color="transparent" />
+                </linearGradient>
+                <mask id="capMask">
+                  <!-- Mortarboard Cap Path -->
+                  <path
+                    d="M50 10 L5 35 L50 60 L95 35 Z M50 60 L50 60 L15 40 L15 50 C15 65 30 75 50 75 C70 75 85 65 85 50 L85 40 L50 60"
+                    fill="white" stroke="white" stroke-width="2" stroke-linejoin="round" />
+                  <circle cx="50" cy="10" r="3" fill="white" />
+                  <!-- Tassel -->
+                  <path d="M50 10 Q 80 10 90 25" stroke="white" stroke-width="2" fill="none" />
+                  <circle cx="90" cy="25" r="2" fill="white" />
+                </mask>
+              </defs>
+              <!-- Background Outline -->
+              <path
+                d="M50 10 L5 35 L50 60 L95 35 Z M50 60 L50 60 L15 40 L15 50 C15 65 30 75 50 75 C70 75 85 65 85 50 L85 40 L50 60"
+                fill="none" stroke="#333" stroke-width="2" stroke-linejoin="round" />
+              <path d="M50 10 Q 80 10 90 25" stroke="#333" stroke-width="2" fill="none" />
+
+              <!-- Filled Layer -->
+              <rect x="0" y="0" width="100" height="100" fill="url(#fill2026)" mask="url(#capMask)" class="meter-fill"
+                style="--target-height: 85%" />
+            </svg>
+          </div>
+          <p class="fund-text"><strong>$8,500</strong> / $10,000</p>
+          <a href="#donate" class="btn-small">Donate</a>
+        </div>
+
+        <!-- JUNIORS (2027) -->
+        <div class="meter-card">
+          <h2>Class of 2027</h2>
+          <div class="cap-meter" data-percentage="60">
+            <svg viewBox="0 0 100 80" class="cap-svg">
+              <defs>
+                <linearGradient id="fill2027" x1="0" y1="1" x2="0" y2="0">
+                  <stop offset="0%" stop-color="#003366" />
+                  <stop offset="60%" stop-color="#003366" />
+                  <stop offset="60%" stop-color="transparent" />
+                  <stop offset="100%" stop-color="transparent" />
+                </linearGradient>
+              </defs>
+              <path
+                d="M50 10 L5 35 L50 60 L95 35 Z M50 60 L50 60 L15 40 L15 50 C15 65 30 75 50 75 C70 75 85 65 85 50 L85 40 L50 60"
+                fill="none" stroke="#333" stroke-width="2" stroke-linejoin="round" />
+              <path d="M50 10 Q 80 10 90 25" stroke="#333" stroke-width="2" fill="none" />
+              <rect x="0" y="0" width="100" height="100" fill="url(#fill2027)" mask="url(#capMask)" class="meter-fill"
+                style="--target-height: 60%" />
+            </svg>
+          </div>
+          <p class="fund-text"><strong>$3,000</strong> / $5,000</p>
+          <a href="#donate" class="btn-small">Donate</a>
+        </div>
+
+        <!-- SOPHOMORES (2028) -->
+        <div class="meter-card">
+          <h2>Class of 2028</h2>
+          <div class="cap-meter" data-percentage="35">
+            <svg viewBox="0 0 100 80" class="cap-svg">
+              <defs>
+                <linearGradient id="fill2028" x1="0" y1="1" x2="0" y2="0">
+                  <stop offset="0%" stop-color="#003366" />
+                  <stop offset="35%" stop-color="#003366" />
+                  <stop offset="35%" stop-color="transparent" />
+                  <stop offset="100%" stop-color="transparent" />
+                </linearGradient>
+              </defs>
+              <path
+                d="M50 10 L5 35 L50 60 L95 35 Z M50 60 L50 60 L15 40 L15 50 C15 65 30 75 50 75 C70 75 85 65 85 50 L85 40 L50 60"
+                fill="none" stroke="#333" stroke-width="2" stroke-linejoin="round" />
+              <path d="M50 10 Q 80 10 90 25" stroke="#333" stroke-width="2" fill="none" />
+              <rect x="0" y="0" width="100" height="100" fill="url(#fill2028)" mask="url(#capMask)" class="meter-fill"
+                style="--target-height: 35%" />
+            </svg>
+          </div>
+          <p class="fund-text"><strong>$875</strong> / $2,500</p>
+          <a href="#donate" class="btn-small">Donate</a>
+        </div>
+
+        <!-- FRESHMEN (2029) -->
+        <div class="meter-card">
+          <h2>Class of 2029</h2>
+          <div class="cap-meter" data-percentage="15">
+            <svg viewBox="0 0 100 80" class="cap-svg">
+              <defs>
+                <linearGradient id="fill2029" x1="0" y1="1" x2="0" y2="0">
+                  <stop offset="0%" stop-color="#003366" />
+                  <stop offset="15%" stop-color="#003366" />
+                  <stop offset="15%" stop-color="transparent" />
+                  <stop offset="100%" stop-color="transparent" />
+                </linearGradient>
+              </defs>
+              <path
+                d="M50 10 L5 35 L50 60 L95 35 Z M50 60 L50 60 L15 40 L15 50 C15 65 30 75 50 75 C70 75 85 65 85 50 L85 40 L50 60"
+                fill="none" stroke="#333" stroke-width="2" stroke-linejoin="round" />
+              <path d="M50 10 Q 80 10 90 25" stroke="#333" stroke-width="2" fill="none" />
+              <rect x="0" y="0" width="100" height="100" fill="url(#fill2029)" mask="url(#capMask)" class="meter-fill"
+                style="--target-height: 15%" />
+            </svg>
+          </div>
+          <p class="fund-text">Starting Out!</p>
+          <a href="#donate" class="btn-small">Donate</a>
+        </div>
+
+      </div>
     </div>
-  </nav>
-</header>
+  </section>
 
-<!-- Hero Section -->
-<section id="hero" class="proj-grad">
-  <div class="hero-content">
-    <img class="hero-logo" src="assets/logo.webp?v=1" alt="Logo"/>
-    <h1>🎓 Project Graduation at KHS!</h1>
-    <p></p>
-    <a href="#support" class="btn">Support</a>
-  </div>
-</section>
-
-<section id="project-graduation" class="section">
-  <div class="container">
-
-    <p class="highlight-box">
-      Did you know Project Graduation was born right here in Maine? In 1980, Oxford Hills High School launched the very first event to provide graduating seniors with a safe, organized, adult-supervised, and chemical-free celebration—and that same spirit continues today at Kennebunk High School.
-    </p>
-
-    <p>
-      It is a night historically known for poor decisions, so as a community, we are collectively working to keep everyone a little safer. Each year, an amazing team of educators and parents works together to give our seniors a night to remember, and it’s all made possible by the generous support of our community.
-    </p>
-  </div>
-
-  <div class="container" id="support">
-    <h3>📣 Stay Connected</h3>
-    <p>
-      To all KHS parents and our beloved Kennebunk/Kennebunkport/Arundel community: We invite you to follow us on social media for important updates and exciting announcements!
-    </p>
-    <p>
-      👉 Follow @KHSProjectGraduation on Facebook and Instagram.
-    </p>
-    <div class="btn-group container">
-      <a href="https://www.facebook.com/KHSProjectGraduation" target="_blank" class="btn">Follow on Facebook</a>
-      <a href="https://www.instagram.com/KHSProjectGraduation" target="_blank" class="btn">Follow on Instagram</a>
-    </div>
-    <p>
-      We'll be sharing fundraiser news, volunteer opportunities, and more all year long.
-    </p>
-  </div>
-
-  <div class="container">
-    <h3>🗓 Upcoming Events</h3>
-    <p>Mark your calendars! Fundraising is in full swing for future Project Graduation celebrations:</p>
+  <section id="project-graduation" class="section">
     <div class="container">
+
+      <p class="highlight-box">
+        Did you know Project Graduation was born right here in Maine? In 1980, Oxford Hills High School launched the
+        very first event to provide graduating seniors with a safe, organized, adult-supervised, and chemical-free
+        celebration—and that same spirit continues today at Kennebunk High School.
+      </p>
+
+      <p>
+        It is a night historically known for poor decisions, so as a community, we are collectively working to keep
+        everyone a little safer. Each year, an amazing team of educators and parents works together to give our seniors
+        a night to remember, and it’s all made possible by the generous support of our community.
+      </p>
+    </div>
+
+    <div class="container" id="faq">
+      <h3>Project Graduation FAQ</h3>
+
+      <div class="faq-item">
+        <h4>What’s the Backstory?</h4>
+        <p>Project Graduation (often called “Project Grad”) began at Oxford Hills High School in Maine in 1980 following
+          a tragic car accident. The program was created to provide graduating seniors with a fun, memorable, and safe
+          graduation-night experience on a night that has historically been associated with poor decision-making.</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>How Is It Organized?</h4>
+        <p>At KHS, Project Graduation is organized by a small group of parent volunteers along with the Class
+          Advisor(s). All parents are welcome to join the planning committee—we typically begin meeting in late spring.
+        </p>
+        <p>Together, we plan an inclusive and exciting celebration designed to appeal to the entire graduating class.
+          The details of the event are kept a surprise until students board the buses after graduation, which adds to
+          the excitement.</p>
+        <p>Past experiences have included:</p>
+        <ul>
+          <li>Harbor cruises</li>
+          <li>Cranmore Outdoor Adventure Park</li>
+          <li>Go-karts and arcades</li>
+          <li>Hypnotist shows and comedians</li>
+          <li>Laser tag</li>
+          <li>Tons of food: dinner, midnight snacks, drinks, and breakfast for over 150 teens and volunteers!</li>
+        </ul>
+        <p>The event usually begins around 5:00 PM and concludes with our return to KHS at approximately 6:00 AM the
+          following morning.</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>Who Can Participate?</h4>
+        <p>The event is open to all KHS graduating seniors, and we truly hope every student will attend.</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>What If My Child Is Unsure?</h4>
+        <p>Encourage them to talk with their friends, counselor, or a teacher to get a sense of whether this is
+          something they’d enjoy. While it is a long night, KHS typically sees about 90% class participation, which
+          speaks to how positive and meaningful the experience is for most students.</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>How Much Does It Cost?</h4>
+        <p>The average cost is approximately $225 per student.</p>
+        <p>This reflects the reality that not every venue can accommodate 150 students at once, and many of the places
+          we use remain open after normal business hours, which increases costs.</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>Why Do You Need Funds Now?</h4>
+        <p>To secure the best venues and pricing—and avoid being shut out of desirable options—we need to book locations
+          in the summer/early fall. Reserving these spaces requires large deposits for items such as buses, venues, and
+          meals.</p>
+        <p>It’s important to remember that nearly every high school in New England hosts a Grad Night, so we are
+          competing with many other schools to lock in venues. Waiting until the spring before graduation typically
+          means fewer options and potentially higher costs.</p>
+      </div>
+
+      <div class="faq-item">
+        <h4>Why Not Keep It Simple (e.g., a Bonfire on the Beach)?</h4>
+        <p>Liability and safety considerations make this unrealistic. Even a casual event still requires transportation,
+          food, insurance, supervision, and secured locations. Project Graduation’s structure ensures a controlled, safe
+          environment throughout the night.</p>
+      </div>
+    </div>
+
+    <div class="container" id="sponsors">
+      <h3>Business Sponsors</h3>
+      <p>Sponsor your business with us! It starts at $250 (Tax Deductible)</p>
+      <p>Our demographics represents an ideal audience for real estate agents, mortgage brokers, financial planners, and
+        tax consultants, as major investment and planning decisions often align with the high school graduation years
+        and frequently intersect with both aging parents and adult children.</p>
+      <p>We are also a highly targeted audience for empty-nester lifestyle services, including travel, home
+        re-decorating, and entertaining—making businesses such as travel agencies, designers, and even dog walkers a
+        natural fit. Additionally, our demographics frequently engage with florists, event venues, and restaurants as we
+        reach milestone moments like weddings, graduations, and retirement celebrations.</p>
+      <p>And yes—our demographic is also right on time for oral surgeons (hello, wisdom teeth!) and joint, knee, and
+        back pain specialists (hello, aging process!).</p>
+    </div>
+
+    <div class="container" id="key-dates">
+      <h3>Looking Ahead – Key Dates</h3>
       <ul class="events-list">
-        <li>🎾 <strong>Pickleball Tournament</strong> – For the Class of 2027 (August) – <a href="#">Sign up here</a></li>
-        <li>🏈 <strong>Homecoming 2024</strong> – September 27
-          <ul>
-            <li>Seniors run a Dunk Tank</li>
-            <li>Juniors run a How Fast is Your Throw Booth</li>
-            <li>Sophomores do temporary Tattoos</li>
-          </ul>
+        <li><strong>Week of March 2nd:</strong> Spirit Week</li>
+        <li><strong>March:</strong> Prom Raffle</li>
+        <li><strong>May XX:</strong> Prom</li>
+        <li><strong>May 31:</strong> Deadline to submit Senior T-shirt & Logo designs (Student Council vote on June 2)
         </li>
-        <li>🎉 More exciting events coming soon!</li>
+        <li><strong>June XX:</strong> Class of 2026 Graduation</li>
+        <li><strong>Late August:</strong> Senior Year Class Group Photo & T-shirt Pickup</li>
+        <li><strong>September XX:</strong> First Day of School Sunrise Breakfast at Gooch’s (donuts and coffee provided)
+        </li>
+        <li><strong>Fall 2026:</strong> Homecoming Parade</li>
+        <li><strong>Starting September 2026:</strong> Winner Takes All Raffle</li>
+        <li><strong>First Weekend of Prelude:</strong> Christmas Prelude Parking Fundraiser</li>
+        <li><strong>January/February 2027:</strong> Senior Basketball Game Night</li>
+        <li><strong>May 2027:</strong> Senior Transition Project</li>
+        <li><strong>Senior Ditch Day</strong></li>
       </ul>
     </div>
-  </div>
 
-  <div class="container">
-    <h3>🎉 What Does Project Graduation Look Like?</h3>
-    <p>
-      We’re still in the planning phase for the Class of 2026, and we love keeping the details a surprise! But here’s a look at what seniors have experienced in the past:
-    </p>
-    <div class="events-list">
-      <ul>
-        <li>Harbor cruises</li>
-        <li>Cranmore Outdoor Adventure Park</li>
-        <li>Go-karts and arcades</li>
-        <li>Hypnotist shows and comedians</li>
-        <li>Laser tag</li>
-        <li>Tons of food: dinner, midnight snacks, drinks, and breakfast for over 150 teens and volunteers!</li>
-      </ul>
+    <div class="container">
+      <h3>🙋 Get Involved</h3>
+      <p>
+        📧 Interested in volunteering or joining the planning team? Contact Don Weafer at <a
+          href="mailto:dweafer@rsu21.net">dweafer@rsu21.net</a>.
+      </p>
+      <div class="btn-group container">
+        <a href="mailto:dweafer@rsu21.net" class="btn">Email Don Weafer</a>
+      </div>
     </div>
-  </div>
 
-  <div class="container">
-    <h3>🙋 Get Involved</h3>
-    <p>
-      📧 Interested in volunteering or joining the planning team? Contact Don Weafer at <a href="mailto:dweafer@rsu21.net">dweafer@rsu21.net</a>.
-    </p>
-    <div class="btn-group container">
-      <a href="mailto:dweafer@rsu21.net" class="btn">Email Don Weafer</a>
+    <div class="container" id="student-challenge">
+      <h3>📱 Students: Spread the Word!</h3>
+      <p>
+        Help your class win the fundraising challenge! Copy the message below and text it to 5 family members or
+        friends.
+      </p>
+
+      <div class="copy-box-container">
+        <div class="copy-box" id="appealText">
+          Hey! 👋 I'm raising money for my class's Project Graduation at Kennebunk High School. We are competing to see
+          which grade can raise the most! Would you be willing to support us? Every bit helps! You can Venmo us @KHSPG
+          (make sure to put my graduation year in the note!). Thank you!! 🎓💙
+        </div>
+        <button onclick="copyAppeal()" class="btn copy-btn" id="copyBtn">
+          <i class="fas fa-copy"></i> Copy Text
+        </button>
+      </div>
+
+      <script>
+        function copyAppeal() {
+          // Get the text field
+          var copyText = document.getElementById("appealText").innerText;
+
+          // Copy the text inside the text field
+          navigator.clipboard.writeText(copyText).then(function () {
+            // Change button text to indicate success
+            var btn = document.getElementById("copyBtn");
+            var originalContent = btn.innerHTML;
+
+            btn.innerHTML = '<i class="fas fa-check"></i> Copied!';
+            btn.style.backgroundColor = '#4CAF50';
+            btn.style.color = 'white';
+
+            setTimeout(function () {
+              btn.innerHTML = originalContent;
+              btn.style.backgroundColor = '';
+              btn.style.color = '';
+            }, 2000);
+          }, function (err) {
+            console.error('Async: Could not copy text: ', err);
+          });
+        }
+      </script>
     </div>
-  </div>
 
-  <div class="container">
-    <h3>💸 Donate Today</h3>
-    <p class="highlight-box">
-      Project Graduation is free for all graduating KHS seniors, and that’s only possible thanks to donations from local businesses, charitable organizations, and families like yours.
-    </p>
-    <p>
-      If you'd like to make a tax-deductible donation, please:
-    </p>
-    <p>
-      <strong>➡ Venmo:</strong>
-      <a href="https://venmo.com/code?user_id=2983648978534400422" target="_blank">@KHSAppreciation</a>
-      <br>
-      💬 Please include a note with the graduating class you'd like to support.
-    </p>
-    <div class="btn-group container">
-      <a href="https://venmo.com/code?user_id=2983648978534400422" target="_blank" class="btn">Donate via Venmo</a>
+    <div class="container" id="donate">
+      <h3>How to Make a Tax-Deductible Donation</h3>
+      <div class="donation-instructions">
+        <p>1. <strong>Venmo:</strong> @KHSProjectGrad</p>
+        <p class="note">Please include Class of ’27 and your student’s name in the memo.</p>
+
+        <p>2. <strong>Check:</strong> Drop off at the KHS front office or mail (payable to KHS Project Graduation) to:
+        </p>
+        <address>
+          Emilie Cornell, Advisor for Class of 2027<br>
+          c/o KHS<br>
+          89 Fletcher Street<br>
+          Kennebunk, ME 04043
+        </address>
+      </div>
+
+      <div class="btn-group container">
+        <a href="https://venmo.com/KHSProjectGrad" target="_blank" class="btn">Donate via Venmo</a>
+      </div>
     </div>
-    <p>Thank you for helping us keep this incredible tradition alive and give our seniors a night they’ll never forget!</p>
-  </div>
-</section>
+  </section>
 
-<!-- Footer -->
-<footer id="footer">
-  <div class="social-icons">
-    <a href="https://www.facebook.com/profile.php?id=61565337432516"
-       target="_blank"><i class="fab fa-facebook-square"></i></a>
-    <a href="https://github.com/hen1227/khs-ac-website/tree/master"
-       target="_blank"><i class="fa-brands fa-github"></i></a>
-    <!-- Add other social media icons if necessary -->
-    <span class="disclaimer">&copy; 2025 Kennebunk High School Appreciation Committee</span>
-  </div>
-</footer>
+  <!-- Footer -->
+  <footer id="footer">
+    <div class="social-icons">
+      <a href="https://www.facebook.com/profile.php?id=61565337432516" target="_blank"><i
+          class="fab fa-facebook-square"></i></a>
+      <a href="https://github.com/hen1227/khs-ac-website/tree/master" target="_blank"><i
+          class="fa-brands fa-github"></i></a>
+      <!-- Add other social media icons if necessary -->
+      <span class="disclaimer">&copy; 2026 Kennebunk High School Appreciation Committee</span>
+    </div>
+  </footer>
 </body>
+
 </html>

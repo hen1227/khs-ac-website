@@ -33,6 +33,7 @@ a {
     text-align: center;
   }
 }
+
 .large-container {
   width: 90%;
   max-width: 1200px;
@@ -54,7 +55,8 @@ header {
 .nav-container {
   display: flex;
   align-items: center;
-  justify-content: space-between; /* Added to space out logo and hamburger */
+  justify-content: space-between;
+  /* Added to space out logo and hamburger */
   margin: 0 20px;
   position: relative;
 }
@@ -113,7 +115,8 @@ header {
     display: block;
     cursor: pointer;
     position: relative;
-    z-index: 1001; /* Ensure it stays above other elements */
+    z-index: 1001;
+    /* Ensure it stays above other elements */
   }
 
   /* Style the hamburger icon */
@@ -144,16 +147,16 @@ header {
   }
 
   /* Transform the hamburger icon into an 'X' when clicked */
-  #nav-toggle:checked + .nav-toggle-label span {
+  #nav-toggle:checked+.nav-toggle-label span {
     background: transparent;
   }
 
-  #nav-toggle:checked + .nav-toggle-label span::before {
+  #nav-toggle:checked+.nav-toggle-label span::before {
     transform: rotate(45deg);
     top: 0;
   }
 
-  #nav-toggle:checked + .nav-toggle-label span::after {
+  #nav-toggle:checked+.nav-toggle-label span::after {
     transform: rotate(-45deg);
     top: 0;
   }
@@ -178,7 +181,7 @@ header {
   }
 
   /* Show the menu when the hamburger is clicked */
-  #nav-toggle:checked + .nav-toggle-label + .nav-menu {
+  #nav-toggle:checked+.nav-toggle-label+.nav-menu {
     transform: translateX(0);
   }
 
@@ -204,10 +207,174 @@ header {
   color: #fff;
   text-align: center;
 }
+
 #hero.proj-grad {
-  background:
-    linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
-    url('../assets/bus.webp') center top / cover no-repeat;
+  /* Clean gradient background instead of bus image */
+  background: linear-gradient(135deg, #e6f0ff 0%, #ffffff 100%);
+  color: #333;
+  height: auto;
+  min-height: 80vh;
+  padding-top: 100px;
+  /* Ensure clearance for fixed header */
+  padding-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  /* Allow content to stack naturally */
+  justify-content: flex-start;
+  /* Start from top, not center */
+}
+
+#hero.proj-grad::after {
+  display: none;
+  /* Remove the dark overlay */
+}
+
+/* New Hero Header */
+.hero-header {
+  margin-bottom: 40px;
+}
+
+.hero-header h1 {
+  font-size: 42px;
+  color: #003366;
+  margin-bottom: 15px;
+  text-shadow: none;
+}
+
+.hero-header p {
+  color: #555;
+  font-size: 20px;
+  text-shadow: none;
+}
+
+.hero-logo-small {
+  max-height: 120px;
+  margin-bottom: 20px;
+}
+
+/* Graduation Meters Grid */
+.grad-meters-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.meter-card {
+  background: #fff;
+  border-radius: 15px;
+  padding: 25px 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.meter-card:hover {
+  transform: translateY(-5px);
+}
+
+.meter-card h2 {
+  font-size: 22px;
+  color: #003366;
+  margin-bottom: 20px;
+}
+
+.cap-meter {
+  width: 100%;
+  max-width: 200px;
+  margin: 0 auto 20px;
+  position: relative;
+}
+
+.cap-svg {
+  width: 100%;
+  height: auto;
+  overflow: visible;
+  filter: drop-shadow(0 5px 5px rgba(0, 0, 0, 0.1));
+}
+
+/* Animation for the fill */
+@keyframes fillUp {
+  from {
+    y: 100%;
+    height: 0;
+  }
+
+  to {
+    y: 0;
+    height: 100%;
+  }
+}
+
+/* Note: The fluid fill logic is handled by the gradient offsets in the SVG defs.
+   If we want to animate the gradient offset, we can do that too, but simple CSS transform is harder on gradients.
+   Instead, we can use the rect height.
+*/
+
+/* .meter-fill handles the filling visual */
+.meter-fill {
+  transition: all 1s ease-out;
+}
+
+/* Student Challenge Copy Box */
+.copy-box-container {
+  max-width: 600px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+.copy-box {
+  background-color: #f1f8ff;
+  border: 2px dashed #003366;
+  padding: 20px;
+  border-radius: 10px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: left;
+  line-height: 1.5;
+}
+
+.copy-btn {
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.fund-text {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.btn-small {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #ffd700;
+  color: #003366;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 14px;
+  transition: background 0.3s;
+}
+
+.btn-small:hover {
+  background-color: #e6b800;
+}
+
+@media (max-width: 768px) {
+  #hero.proj-grad {
+    padding-top: 100px;
+    /* Space for fixed header */
+    background: linear-gradient(135deg, #e6f0ff 0%, #ffffff 100%);
+  }
+
+  .hero-logo-small {
+    max-height: 80px;
+  }
 }
 
 #hero::after {
@@ -233,14 +400,14 @@ header {
   /*text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);*/
 }
 
-.hero-content > h1 {
+.hero-content>h1 {
   font-size: 48px;
   margin: 20px 0;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   padding: 0 30px;
 }
 
-.hero-content > p {
+.hero-content>p {
   font-size: 24px;
   margin: 0 20px 30px;
   width: 90%;
@@ -252,9 +419,10 @@ header {
   #hero {
     background: url('../assets/khs-entrance.webp') 30% top / cover no-repeat;
   }
+
   #hero.proj-grad {
     background:
-      linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+      linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
       url('../assets/bus.webp') 30% center / cover no-repeat;
   }
 
@@ -685,6 +853,7 @@ header {
     opacity: 0;
     transform: translate3d(0, 40px, 0);
   }
+
   to {
     opacity: 1;
     transform: none;
@@ -735,13 +904,13 @@ header {
   max-width: 500px;
 }
 
-.events-list > li {
+.events-list>li {
   margin-bottom: 10px;
   padding-left: 20px;
   position: relative;
 }
 
-.events-list > li::before {
+.events-list>li::before {
   content: "⭐";
   position: absolute;
   left: 0;
@@ -770,4 +939,69 @@ header {
   gap: 15px;
   margin: 20px auto;
   max-width: 800px;
+}
+
+
+
+/* FAQ Styling */
+.faq-item {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 25px;
+  margin: 0 auto 20px auto;
+  /* Centered with bottom margin */
+  max-width: 800px;
+  /* Constrain width */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-left: 5px solid var(--primary-color);
+  text-align: left;
+  /* Ensure text is left aligned for readability */
+}
+
+.faq-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.faq-item h4 {
+  color: var(--primary-color);
+  font-size: 20px;
+  margin-bottom: 15px;
+  font-weight: 600;
+  border-bottom: 2px solid rgba(0, 51, 102, 0.1);
+  padding-bottom: 10px;
+}
+
+.faq-item p {
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  max-width: 100%;
+  /* Override global container p max-width if needed */
+  text-align: left;
+  /* Ensure left align inside card */
+}
+
+.faq-item ul {
+  list-style-position: outside;
+  /* Better for multiline bullets */
+  margin-bottom: 15px;
+  color: #555;
+  padding-left: 20px;
+  /* Standard indentation */
+  text-align: left;
+}
+
+.faq-item ul li {
+  margin-bottom: 8px;
+}
+
+/* Donation Address Styling */
+address {
+  font-style: normal;
+  text-align: left;
+  max-width: 400px;
+  margin: 20px auto;
+  line-height: 1.6;
 }

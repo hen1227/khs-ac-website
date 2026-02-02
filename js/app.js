@@ -46,14 +46,26 @@ items.forEach(item => {
   const now = new Date();
   const currentYear = now.getFullYear();
 
-  const testDate = new Date(`${monthDay} 2025 ${timeText}`);
+  const testDate = new Date(`${monthDay} 2000 ${timeText}`); // Year doesn't matter for month extraction
   const eventMonth = testDate.getMonth();
+  const currentMonth = now.getMonth();
 
   let year;
-  if (currentYear === 2025) {
-    year = eventMonth >= 8 ? 2025 : 2026;
+  // School year logic: Assume school year starts in August (Month 7)
+  // If we are in the first half of the school year (Aug-Dec)
+  if (currentMonth >= 7) {
+    if (eventMonth >= 7) {
+      year = currentYear; // e.g., Sept 2025
+    } else {
+      year = currentYear + 1; // e.g., Feb 2026
+    }
   } else {
-    year = eventMonth >= 8 ? 2026 : 2025;
+    // We are in the second half of the school year (Jan-July)
+    if (eventMonth >= 7) {
+      year = currentYear - 1; // e.g., Sept 2025 (when now is Feb 2026)
+    } else {
+      year = currentYear; // e.g., Feb 2026
+    }
   }
 
   const eventDate = new Date(`${monthDay} ${year} ${timeText}`);
