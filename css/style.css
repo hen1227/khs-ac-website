@@ -147,16 +147,16 @@ header {
   }
 
   /* Transform the hamburger icon into an 'X' when clicked */
-  #nav-toggle:checked+.nav-toggle-label span {
+  #nav-toggle:checked + .nav-toggle-label span {
     background: transparent;
   }
 
-  #nav-toggle:checked+.nav-toggle-label span::before {
+  #nav-toggle:checked + .nav-toggle-label span::before {
     transform: rotate(45deg);
     top: 0;
   }
 
-  #nav-toggle:checked+.nav-toggle-label span::after {
+  #nav-toggle:checked + .nav-toggle-label span::after {
     transform: rotate(-45deg);
     top: 0;
   }
@@ -181,7 +181,7 @@ header {
   }
 
   /* Show the menu when the hamburger is clicked */
-  #nav-toggle:checked+.nav-toggle-label+.nav-menu {
+  #nav-toggle:checked + .nav-toggle-label + .nav-menu {
     transform: translateX(0);
   }
 
@@ -210,7 +210,8 @@ header {
 
 #hero.proj-grad {
   /* Clean gradient background instead of bus image */
-  background: linear-gradient(135deg, #e6f0ff 0%, #ffffff 100%);
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+  url('../assets/bus.webp') 30% center / cover no-repeat;
   color: #333;
   height: auto;
   min-height: 80vh;
@@ -400,7 +401,7 @@ header {
   /*text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);*/
 }
 
-.hero-content>h1 {
+.hero-content > h1 {
   font-size: 48px;
   margin: 20px 0;
   color: #fff;
@@ -408,7 +409,7 @@ header {
   padding: 0 30px;
 }
 
-.hero-content>p {
+.hero-content > p {
   font-size: 24px;
   margin: 0 20px 30px;
   width: 90%;
@@ -422,9 +423,8 @@ header {
   }
 
   #hero.proj-grad {
-    background:
-      linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-      url('../assets/bus.webp') 30% center / cover no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url('../assets/bus.webp') 30% center / cover no-repeat;
   }
 
   .hero-logo {
@@ -905,13 +905,13 @@ header {
   max-width: 500px;
 }
 
-.events-list>li {
+.events-list > li {
   margin-bottom: 10px;
   padding-left: 20px;
   position: relative;
 }
 
-.events-list>li::before {
+.events-list > li::before {
   content: "⭐";
   position: absolute;
   left: 0;
@@ -941,7 +941,6 @@ header {
   margin: 20px auto;
   max-width: 800px;
 }
-
 
 
 /* FAQ Styling */
